@@ -2,17 +2,21 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable('product-catalog-tables', {
-      id: {
-        allowNull: false,
-        autoIncrement: true,
-        primaryKey: true,
-        type: Sequelize.INTEGER
-      },
       id_catalog: {
-        type: Sequelize.INT
+        type: Sequelize.INTEGER,
+        primaryKey: true,
+        references: {
+          model: 'catalog-tables',
+          key: 'id'
+        }
       },
       id_product: {
-        type: Sequelize.INT
+        type: Sequelize.INTEGER,
+        primaryKey: true,
+        references: {
+          model: 'product-tables',
+          key: 'id'
+        }
       },
       createdAt: {
         allowNull: false,

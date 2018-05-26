@@ -8,14 +8,15 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      id: {
-        type: Sequelize.INT
-      },
       id_user: {
-        type: Sequelize.INT
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'user-tables',
+          key: 'id'
+        }
       },
       totalprice: {
-        type: Sequelize.INT
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,
