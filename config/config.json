@@ -2,9 +2,10 @@
   "development": {
     "username": "root",
     "password": null,
-    "database": "book_marker",
+    "database": "book_market",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "collation": "utf8_unicode_ci"
   },
   "test": {
     "username": "root",
